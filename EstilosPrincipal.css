@@ -1,0 +1,523 @@
+.logo-titulo {
+    width: 100px;
+    height: auto;
+    vertical-align: middle;
+    mix-blend-mode: multiply
+}
+
+/* Estilos del header */
+
+header {
+    background-image: url('/ImagenesPrincipal/Portada2.png'); /* Ruta de la imagen de fondo */
+    background-size: contain; /* Ajusta la imagen para que se vea completa */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position: center; /* Centra la imagen dentro del header */
+    color: rgb(227, 92, 92);
+    padding: 0; /* Elimina padding adicional */
+    height: 79.5vh; /* Ajusta la altura para que ocupe toda la pantalla */
+    text-align: center;
+}
+
+/* Estilos para organizar logo y título */
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    gap: 20px; /* Espacio entre el logo y el título */
+}
+
+    
+/* Cuerpo */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #eeb0b0;
+}
+
+/*Navegador*/
+
+nav {
+    position: fixed; /* Hace que el nav sea fijo */
+    top: 0; /* Posición en la parte superior */
+    left: 0; /* Asegura que comience desde el borde izquierdo */
+    width: 100%; /* Ocupa todo el ancho de la pantalla */
+    background-color: #fff; /* Fija un fondo blanco para mayor legibilidad */
+    text-align: center;
+    margin: 0; /* Elimina márgenes externos */
+    padding: 10px 0; /* Espaciado interno */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Añade una sombra para diferenciarlo del contenido */
+    z-index: 1000; /* Asegura que quede por encima de otros elementos */
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #f89a26;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: color 0.3s; /* Efecto suave al pasar el cursor */
+}
+
+nav a:hover {
+    color: #f56d1e; /* Cambia de color al pasar el cursor */
+}
+
+
+/*Secciones*/
+
+section {
+    padding: 20px;
+    margin: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/*Carrucel de PM*/
+
+.carousel-PM {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-track-PM {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item-PM {
+    min-width: 33.33%; /* Mostrar tres imágenes a la vez */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-item-PM img {
+    width: 100%;
+    max-height: 300px; /* Ajusta el tamaño de las imágenes */
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.carousel-prev-PM, .carousel-next-PM {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 2;
+    font-size: 1em;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.carousel-prev-PM {
+    left: 10px;
+}
+
+.carousel-next-PM {
+    right: 10px;
+}
+
+.carousel-prev-PM:hover, .carousel-next-PM:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/*Carrucel de EIT*/
+
+.carousel-EIT {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-track-EIT {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item-EIT {
+    min-width: 33.33%; /* Mostrar tres imágenes a la vez */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.carousel-item-EIT img {
+    width: 100%;
+    max-height: 300px; /* Ajusta el tamaño de las imágenes */
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.carousel-prev-EIT, .carousel-next-EIT {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 2;
+    font-size: 1em;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.carousel-prev-EIT {
+    left: 10px;
+}
+
+.carousel-next-EIT {
+    right: 10px;
+}
+
+.carousel-prev-EIT:hover, .carousel-next-EIT:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/*Carrucel de Recomendaciones*/
+
+.carousel-content-recomendaciones {
+    display: flex;
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+    gap: 20px; /* Espacio entre el video y el texto */
+    flex-wrap: wrap; /* Permite que el contenido se ajuste en pantallas más pequeñas */
+}
+
+.carousel-item-recomendaciones {
+    min-width: 100%;
+    display: flex;
+    align-items: center; /* Centra el contenido dentro del ítem */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    padding: 20px; /* Espaciado general */
+    text-align: center; /* Centra el texto si hay varias líneas */
+}
+
+.carousel-content-recomendaciones video {
+    max-width: 300px; /* Tamaño fijo para el video */
+    border-radius: 8px; /* Bordes redondeados */
+}
+
+.carousel-recomendaciones {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+.carousel-track-recomendaciones {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-content-recomendaciones img {
+    max-width: 50%; /* Ajusta el tamaño de la imagen */
+    height: auto;
+    border-radius: 8px;
+}
+
+.carousel-text-recomendaciones {
+    max-width: 400px; /* Ajusta el tamaño del texto */
+    text-align: left; /* Alineación del texto */
+}
+
+.carousel-text-recomendaciones p {
+    margin: 0;
+    font-size: 1em; 
+    color: #333;
+    line-height: 1.5; /* Mejora la legibilidad */
+}
+
+.carousel-prev-recomendaciones, .carousel-next-recomendaciones {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 2;
+    font-size: 1em;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.carousel-prev-recomendaciones {
+    left: 10px;
+}
+
+.carousel-next-recomendaciones {
+    right: 10px;
+}
+
+.carousel-prev-recomendaciones:hover, .carousel-next-recomendaciones:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Sección Ubicación */
+
+/* Contenedor principal */
+.ubicacion-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Estilo del mapa */
+.mapa {
+    flex: 1;
+}
+
+/* Imagen completa en el medio */
+.ubicacion-imagen {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ubicacion-imagen img {
+    width: 100%;
+    max-height: 300px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* Estilos del carrusel */
+.ubicacion-carousel {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    height: 300px; /* Ajustar según el tamaño deseado */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: calc(100% * 5); /* Ajustado para dos imágenes */
+}
+
+.carousel-item {
+    flex: 0 0 100%; /* Cada imagen ocupa el 100% del carrusel */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Botones del carrusel */
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 1;
+    border-radius: 50%;
+}
+
+.carousel-button.prev {
+    left: 10px;
+}
+
+.carousel-button.next {
+    right: 10px;
+}
+
+
+/* Galería */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+}
+
+/* Pie de página */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.footer-left {
+    flex: 1;
+}
+
+.footer-left ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-left li {
+    margin-bottom: 10px;
+}
+
+.footer-right {
+    flex: 0;
+}
+
+.footer-right img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Hace la imagen circular */
+    object-fit: cover; /* Ajusta la imagen dentro del círculo */
+    border: 2px solid #ccc; /* Opcional: Borde alrededor de la imagen */
+}
+
+
+.contact-info {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contact-info li {
+    margin-bottom: 5px;
+}
+
+.contact-info li a {
+    color: #f89a26;
+    text-decoration: none;
+}
+
+.contact-info li a:hover {
+    text-decoration: underline;
+}
+
+.social-media-container {
+    position: fixed; /* Fija las redes sociales a la pantalla */
+    top: 50%; /* Centrado vertical */
+    right: 10px; /* Separación del borde derecho */
+    transform: translateY(-50%); /* Ajuste para centrar exactamente */
+    z-index: 1000; /* Asegura que esté sobre otros elementos */
+}
+
+.social-media {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* Los íconos estarán en una columna */
+    gap: 15px; /* Espaciado entre los íconos */
+}
+
+.social-media li {
+    display: inline-block;
+}
+
+.social-media a {
+    display: inline-block;
+    width: 50px; /* Tamaño del círculo */
+    height: 50px;
+    border-radius: 50%; /* Hace que los íconos sean circulares */
+    background-color: rgba(255, 255, 255, 0.3); /* Fondo transparente */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transición */
+}
+
+.social-media a:hover {
+    background-color: rgba(255, 255, 255, 0.6); /* Fondo más visible al pasar el cursor */
+    transform: scale(1.1); /* Agrandar al pasar el cursor */
+}
+
+.social-media img {
+    width: 25px; /* Ajusta el tamaño del ícono */
+    height: 25px;
+}
+
+
+
+
+/* Estilo con el que se abre las imagenes completas */
+
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo semi-transparente */
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 90%; /* Tamaño máximo de la imagen modal */
+    max-height: 90%;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/*Descripciones*/
+
+.description {
+    text-align: center;
+    padding: 50px;
+}
+
+.description h3 {
+    margin: 10px 0 5px;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.description p {
+    font-size: 1em;
+    color: #666;
+}
+

@@ -7,6 +7,7 @@
 
 /* Estilos del header */
 
+/* Estilo para el header */
 header {
     background-image: url('ImagenesPrincipal/Portada2.png'); /* Ruta de la imagen de fondo */
     background-size: contain; /* Ajusta la imagen para que se vea completa */
@@ -17,6 +18,15 @@ header {
     height: 79.5vh; /* Ajusta la altura para que ocupe toda la pantalla */
     text-align: center;
 }
+
+/* Media Query para pantallas pequeñas (móviles) */
+@media screen and (max-width: 768px) {
+    header {
+        background-size: cover; /* Cambia para que la imagen cubra toda el área */
+        height: 50vh; /* Reduce la altura en pantallas pequeñas */
+    }
+}
+
 
 /* Estilos para organizar logo y título */
 
@@ -65,6 +75,13 @@ nav a:hover {
     color: #f56d1e; /* Cambia de color al pasar el cursor */
 }
 
+/* Ocultar el nav en pantallas pequeñas (por debajo de 768px de ancho) */
+@media (max-width: 768px) {
+    nav {
+        display: none; /* Oculta el menú de navegación */
+    }
+}
+
 
 /*Secciones*/
 
@@ -90,7 +107,7 @@ section {
 }
 
 .carousel-item-PM {
-    min-width: 33.33%; /* Mostrar tres imágenes a la vez */
+    min-width: 100%; /* Mostrar una imagen a la vez */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -132,8 +149,15 @@ section {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-/*Carrucel de EIT*/
+/* Estilos específicos para pantallas más grandes */
+@media (min-width: 768px) {
+    .carousel-item-PM {
+        min-width: 33.33%; /* Mostrar tres imágenes a la vez en pantallas grandes */
+    }
+}
 
+
+/* Carrusel de EIT */
 .carousel-EIT {
     position: relative;
     overflow: hidden;
@@ -146,12 +170,13 @@ section {
 }
 
 .carousel-item-EIT {
-    min-width: 33.33%; /* Mostrar tres imágenes a la vez */
+    min-width: 33.33%; /* Por defecto, mostrar tres imágenes a la vez */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
+
 
 
 .carousel-item-EIT img {
@@ -188,6 +213,14 @@ section {
 .carousel-prev-EIT:hover, .carousel-next-EIT:hover {
     background-color: rgba(0, 0, 0, 0.8);
 }
+
+/* Media Queries para pantallas pequeñas (celulares) */
+@media (max-width: 768px) {
+    .carousel-item-EIT {
+        min-width: 100%; /* Mostrar una sola imagen a la vez en pantallas pequeñas */
+    }
+}
+
 
 /*Carrucel de Recomendaciones*/
 
@@ -275,6 +308,7 @@ section {
     display: flex;
     justify-content: space-between;
     gap: 20px;
+    flex-wrap: wrap; /* Permite el ajuste de elementos en pantallas pequeñas */
 }
 
 /* Estilo del mapa */
@@ -311,7 +345,7 @@ section {
 .carousel-track {
     display: flex;
     transition: transform 0.5s ease;
-    width: calc(100% * 5); /* Ajustado para dos imágenes */
+    width: calc(100% * 5); /* Ajustado para varias imágenes */
 }
 
 .carousel-item {
@@ -350,6 +384,27 @@ section {
 .carousel-button.next {
     right: 10px;
 }
+
+/* Media Query para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+    .ubicacion-container {
+        flex-direction: column; /* Cambia la disposición a columna */
+    }
+
+    .mapa, .ubicacion-imagen, .ubicacion-carousel {
+        flex: 1 1 100%; /* Cada sección ocupará el 100% del ancho en pantallas pequeñas */
+        margin-bottom: 20px; /* Añade espacio entre las secciones */
+    }
+
+    .ubicacion-imagen img {
+        max-height: 250px; /* Ajusta el tamaño de la imagen en pantallas pequeñas */
+    }
+
+    .ubicacion-carousel {
+        height: 250px; /* Ajusta la altura del carrusel */
+    }
+}
+
 
 
 /* Galería */
@@ -407,6 +462,7 @@ footer {
 }
 
 
+
 .contact-info {
     list-style: none;
     padding: 0;
@@ -425,6 +481,37 @@ footer {
 .contact-info li a:hover {
     text-decoration: underline;
 }
+
+/* Media Query para pantallas pequeñas (móviles) */
+@media screen and (max-width: 768px) {
+    footer {
+        flex-direction: column; /* Apilar los elementos verticalmente */
+        align-items: flex-start; /* Alinea los elementos al principio */
+        text-align: left; /* Alinea el texto a la izquierda */
+    }
+
+    .footer-left {
+        width: 100%; /* Ocupa todo el ancho */
+        margin-bottom: 20px; /* Espacio inferior entre las secciones */
+    }
+
+    .footer-right {
+        width: 100%; /* Ocupa todo el ancho */
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px; /* Espacio inferior entre las secciones */
+    }
+
+    .footer-right img {
+        width: 120px; /* Tamaño más pequeño en pantallas pequeñas */
+        height: 120px;
+    }
+
+    .contact-info li {
+        margin-bottom: 8px; /* Espaciado ajustado para pantallas más pequeñas */
+    }
+}
+
 
 .social-media-container {
     position: fixed; /* Fija las redes sociales a la pantalla */

@@ -14,12 +14,12 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     prevButton.addEventListener('click', function() {
-        currentIndex = (currentIndex === 0) ? items.length - 3 : currentIndex - 3;
+        currentIndex = (currentIndex === 0) ? items.length - 1 : currentIndex - 1;
         updateCarousel();
     });
 
     nextButton.addEventListener('click', function() {
-        currentIndex = (currentIndex >= items.length - 3) ? 0 : currentIndex + 3;
+        currentIndex = (currentIndex >= items.length - 1) ? 0 : currentIndex + 1;
         updateCarousel();
     });
 
@@ -27,6 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     updateCarousel(); // Inicia el carrusel
 });
+
 
 
 
